@@ -1,0 +1,235 @@
+{
+    "hero": {
+        "slide1": {
+            "subtitle": "Là où l’offre conforme rencontre la vraie demande.",
+            "title": "Construire des ponts commerciaux fiables.",
+            "text": "Prime Bridge International Trading relie des producteurs de confiance aux marchés africains en expansion. Nous créons des liens solides entre producteurs, acheteurs et investisseurs avec fiabilité, transparence et sécurité.",
+            "primaryCta": "Demander un devis",
+            "secondaryCta": "Devenir fournisseur"
+        },
+        "slide2": {
+            "subtitle": "Fourniture transfrontalière fiable.",
+            "title": "Exécution disciplinée. Zéro complication.",
+            "text": "Nous identifions, structurons et livrons des produits agro-alimentaires, énergétiques et stratégiques vers les marchés en croissance, avec précision et conformité internationale.",
+            "primaryCta": "Demander un devis",
+            "secondaryCta": "Rejoindre notre réseau de fournisseurs"
+        },
+        "slide3": {
+            "subtitle": "Commerce structuré. Exécution simplifiée.",
+            "title": "Des produits fiables, livrés à temps.",
+            "text": "Forte d'une présence internationale et d'une équipe d'experts passionnés, Prime Bridge International Trading accompagne ses clients de la négociation à la livraison finale, dans la conformité et la durabilité.",
+            "primaryCta": "Ouvrir une demande commerciale",
+            "secondaryCta": "Télécharger le profil de l’entreprise"
+        }
+    },
+    "navbar": {
+        "home": "Accueil",
+        "about": "À propos",
+        "activities": "Activités",
+        "products": "Produits",
+        "markets": "Marchés",
+        "contact": "Contact",
+        "requestQuote": "Contactez-Nous"
+    },
+    "topbar": {
+        "message": "Prime Bridge International Trading — Commerce structuré. Exécution simplifiée."
+    },
+    "about": {
+        "titlePart1": "À propos de",
+        "titlePart2": "Prime Bridge International Trading",
+        "paragraph1": "Prime Bridge International Trading est une société de négoce international basée à Douala, au Cameroun, spécialisée dans le commerce et la distribution mondiaux de matières premières et de produits stratégiques.",
+        "paragraph2": "Forte de plus de 20 ans d’expérience, notre entreprise relie producteurs, acheteurs et investisseurs à travers le monde grâce à une approche fondée sur la fiabilité, la transparence et la performance.",
+        "imageAlt": "Équipe Prime Bridge en réunion",
+        "expertiseTitle": "Nos domaines d’expertise",
+        "expertise": {
+            "card1": {
+                "imageAlt": "Produits agricoles",
+                "title": "Matières premières agricoles",
+                "text": "Blé, sucre, soja, maïs et sel — des produits essentiels au commerce mondial, approvisionnés avec rigueur et transparence."
+            },
+            "card2": {
+                "imageAlt": "Énergie et ressources",
+                "title": "Énergie et ressources",
+                "text": "Pétrole, gaz et produits dérivés : nous assurons un commerce fluide et conforme aux normes internationales."
+            },
+            "card3": {
+                "imageAlt": "Matières premières modernes",
+                "title": "Matières premières modernes",
+                "text": "Or, devises et cryptomonnaies — des échanges stratégiques intégrant innovation et sécurité financière."
+            }
+        },
+        "visionIconAlt": "Icône vision",
+        "engagementIconAlt": "Icône engagement",
+        "card1": {
+            "title": "Une vision tournée vers la durabilité",
+            "text": "Chez Prime Bridge, nous croyons qu’un commerce éthique, transparent et performant crée de la valeur durable pour tous les acteurs de la chaîne."
+        },
+        "card2": {
+            "title": "Connecter les marchés, renforcer la confiance",
+            "text": "Grâce à notre réseau mondial et notre expertise logistique, nous garantissons des partenariats fiables et rentables à long terme."
+        },
+        "cta": "Télécharger le profil de l’entreprise"
+    },
+    "activities": {
+        "titlePart1": "Nos",
+        "titlePart2": "Activités",
+        "subtitle": "Nous couvrons l’ensemble du cycle commercial – de l’origine à la livraison – avec une expertise intégrée en sourcing, structuration et logistique.",
+        "activity1": {
+            "title": "Origination & Approvisionnement",
+            "subtitle": "Source fiable et durable",
+            "desc": "Relations directes avec des producteurs et exportateurs vérifiés. Contrôle qualité à l’origine, veille sur les récoltes et identification des prix compétitifs pour garantir un approvisionnement régulier et conforme."
+        },
+        "activity2": {
+            "title": "Structuration Commerciale",
+            "subtitle": "Excellence opérationnelle",
+            "desc": "Alignement sur les Incoterms, gestion contractuelle, coordination des devises et instruments bancaires via des partenaires de confiance. Chaque transaction est structurée pour maximiser la performance et la conformité."
+        },
+        "activity3": {
+            "title": "Orchestration Logistique",
+            "subtitle": "Suivi et livraison intégrée",
+            "desc": "Coordination porte-à-porte via les modes maritime, ferroviaire et routier. Assurance cargo, documentation export et suivi complet jusqu’à la livraison finale pour une exécution fluide et sécurisée."
+        }
+    },
+    "products": {
+        "titlePart1": "Nos",
+        "titlePart2": "Catégories de Produits",
+        "subtitle1": "Prime Bridge International Trading propose une offre complète et évolutive, adaptée aux dynamiques des marchés mondiaux et à la disponibilité des matières premières.",
+        "subtitle2": "L’étendue de nos catégories s’élargit selon la demande de nos partenaires, garantissant un approvisionnement fiable et des produits de qualité pour répondre aux besoins du marché.",
+        "product1": {
+            "title": "Céréales",
+            "subtitle": "Blés et grains sélectionnés",
+            "desc": "Blé, maïs, orge et produits agro-alimentaires associés soigneusement sélectionnés pour garantir qualité et fraîcheur."
+        },
+        "product2": {
+            "title": "Produits de base",
+            "subtitle": "Essentiels de la vie quotidienne",
+            "desc": "Sucre, riz, huiles comestibles (sélection) et autres produits indispensables pour l’approvisionnement des marchés et partenaires."
+        },
+        "product3": {
+            "title": "Biens essentiels",
+            "subtitle": "FMCG et gammes alimentaires",
+            "desc": "Gammes alimentaires ciblées et produits de grande consommation (FMCG) pour nos partenaires distributeurs, avec une disponibilité adaptée à la demande."
+        },
+        "button": "En savoir plus",
+        "conclusion": "Notre engagement est de fournir des produits de qualité, fiables et adaptés aux besoins de nos partenaires, tout en respectant les standards internationaux de commerce et d’approvisionnement."
+    },
+    "cta": {
+        "bgAlt": "CTA Background",
+        "title": "Rejoignez Prime Bridge International Trading",
+        "subtitle": "Découvrez nos produits de qualité et trouvez les solutions adaptées à vos besoins. Notre équipe est là pour vous accompagner dans chaque étape.",
+        "button": "Contactez-nous"
+    },
+    "regions": {
+        "title": "<span class='text-primary'>Focalisation</span> Géographique et Stratégique",
+        "p1": "Prime Bridge International Trading relie les centres de demande africains aux origines d’approvisionnement mondiales reconnues pour leur qualité et leur conformité.",
+        "p2": "Nous opérons sur des corridors commerciaux fiables reliant l’Afrique de l’Ouest, du Centre, de l’Est et Australe aux hubs logistiques européens et internationaux.",
+        "demande_title": "Demande",
+        "demande_text": "Afrique de l’Ouest, du Centre, de l’Est et Australe — des marchés en pleine expansion soutenus par des besoins agroalimentaires et énergétiques stables.",
+        "offre_title": "Offre",
+        "offre_text": "Europe et origines mondiales — sources reconnues pour la qualité, la conformité documentaire et la performance logistique."
+    },
+    "whyus": {
+        "title": {
+            "part1": "Pourquoi",
+            "part2": "nous choisir"
+        },
+        "subtitle": "Des relations durables, une exécution disciplinée et une confiance fondée sur la clarté.",
+        "imageAlt": "Commerce international et logistique",
+        "reasons": [
+            {
+                "title": "Efficacité contractuelle",
+                "text": "Des négociations rapides, des cycles devis-commande optimisés et une exécution sans friction."
+            },
+            {
+                "title": "Conformité documentaire",
+                "text": "Priorité à la précision, à la légalité et à la transparence dans chaque document commercial international."
+            },
+            {
+                "title": "Financement structuré",
+                "text": "Des solutions financières adaptées en partenariat avec des banques et institutions reconnues."
+            },
+            {
+                "title": "Discipline d’exécution",
+                "text": "Chaque opération suit un processus clair et transparent, avec un suivi rigoureux."
+            },
+            {
+                "title": "Réseau mondial de confiance",
+                "text": "Plus de 20 ans d’expérience et de relations solides avec producteurs, clients et partenaires logistiques."
+            }
+        ],
+        "cta": "Contactez-nous dès aujourd’hui"
+    },
+    "principles": {
+        "title": "Principes Opérationnels",
+        "principlesList": [
+            {
+                "title": "L’intégrité avant le volume",
+                "text": "Chaque transaction doit être vérifiable, conforme et reproductible."
+            },
+            {
+                "title": "Clarté contractuelle",
+                "text": "Incoterms, spécifications et délais documentés sans ambiguïté."
+            },
+            {
+                "title": "Décisions fondées sur les données",
+                "text": "Découverte des prix, sélection des contreparties et choix des routes basés sur des signaux réels."
+            },
+            {
+                "title": "Esprit de partenariat",
+                "text": "Nous construisons des relations durables, pas des transactions uniques."
+            }
+        ],
+        "companyTitle": "Prime Bridge International Trading",
+        "companyText": "<strong>Prime Bridge International Trading</strong> incarne la fiabilité et l’excellence. Son expertise dans le commerce international et la logistique garantit un accompagnement haut de gamme, basé sur la transparence et la réussite mutuelle.",
+        "button": "Découvrir Prime Bridge"
+    },
+    "governance": {
+        "title": "Gouvernance & Gestion des Risques",
+        "highlight": "Gestion des Risques",
+        "items": [
+            "Vérification préalable et filtrage des sanctions des contreparties",
+            "Spécifications de qualité produit avec inspection tierce si nécessaire",
+            "Instruments financiers structurés via des banques partenaires ; expéditions assurées lorsque applicable",
+            "Contrôle documentaire complet pour réduire les frais de surestaries et les litiges"
+        ]
+    },
+    "impact": {
+        "title": "Impact Social",
+        "highlight": "Social",
+        "paragraphs": [
+            "Des chaînes d’approvisionnement fiables sont essentielles à la sécurité alimentaire et à la résilience économique.",
+            "Nous privilégions les corridors commerciaux et partenariats qui renforcent la disponibilité, la prévisibilité et l’accessibilité dans les marchés que nous desservons."
+        ],
+        "button": "En savoir plus"
+    },
+    "contact": {
+        "title": "Formulaire de contact",
+        "subtitle": "Vous souhaitez nous contacter ? Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+        "labels": {
+            "name": "Nom complet",
+            "email": "Adresse e-mail",
+            "company": "Société (facultatif)",
+            "message": "Message"
+        },
+        "placeholders": {
+            "name": "Votre nom",
+            "email": "nom@exemple.com",
+            "company": "Nom de votre entreprise",
+            "message": "Écrivez votre message..."
+        },
+        "button": "Envoyer",
+        "contacts": {
+            "cameroon": "+237 6 93 11 12 07",
+            "belgium": "+32 470 18 17 25",
+            "russia": "+7 (987) 504-65-57",
+            "email": "office@pbitrading.com"
+        }
+    },
+    "footer": {
+        "description": "Prime Bridge International Trading garantit des solutions fiables et transparentes dans le commerce international et la logistique.",
+        "contactTitle": "Contactez-nous",
+        "quickLinks": "Liens rapides",
+        "followUs": "Suivez-nous",
+        "rights": "Tous droits réservés."
+    }
+}
