@@ -6,19 +6,19 @@ const Products = () => {
 
     const products = [
         {
-            img: "/images/cereal.png",
+            img: "/images/cereale.png",
             titleKey: "products.product1.title",
             subtitleKey: "products.product1.subtitle",
             descKey: "products.product1.desc",
         },
         {
-            img: "/images/premiere.png",
+            img: "/images/fruit.png",
             titleKey: "products.product2.title",
             subtitleKey: "products.product2.subtitle",
             descKey: "products.product2.desc",
         },
         {
-            img: "/images/flop.png",
+            img: "/images/good.png",
             titleKey: "products.product3.title",
             subtitleKey: "products.product3.subtitle",
             descKey: "products.product3.desc",

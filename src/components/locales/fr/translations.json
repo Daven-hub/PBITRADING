@@ -18,7 +18,7 @@
             "subtitle": "Commerce structuré. Exécution simplifiée.",
             "title": "Des produits fiables, livrés à temps.",
             "text": "Forte d'une présence internationale et d'une équipe d'experts passionnés, Prime Bridge International Trading accompagne ses clients de la négociation à la livraison finale, dans la conformité et la durabilité.",
-            "primaryCta": "Ouvrir une demande commerciale",
+            "primaryCta": "Ouvrir une demande com merciale",
             "secondaryCta": "Télécharger le profil de l’entreprise"
         }
     },
@@ -203,26 +203,26 @@
         "button": "En savoir plus"
     },
     "contact": {
-        "title": "Formulaire de contact",
-        "subtitle": "Vous souhaitez nous contacter ? Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+        "title": "Nous contacter",
+        "subtitle": "Nous serons ravis de vous répondre. Remplissez le formulaire ci-dessous.",
         "labels": {
-            "name": "Nom complet",
-            "email": "Adresse e-mail",
-            "company": "Société (facultatif)",
+            "name": "Nom",
+            "email": "Email",
+            "company": "Entreprise",
             "message": "Message"
         },
         "placeholders": {
-            "name": "Votre nom",
-            "email": "nom@exemple.com",
+            "name": "Votre nom complet",
+            "email": "Votre adresse email",
             "company": "Nom de votre entreprise",
-            "message": "Écrivez votre message..."
+            "message": "Écrivez votre message ici..."
         },
-        "button": "Envoyer",
-        "contacts": {
-            "cameroon": "+237 6 93 11 12 07",
-            "belgium": "+32 470 18 17 25",
-            "russia": "+7 (987) 504-65-57",
-            "email": "office@pbitrading.com"
+        "button": "Envoyer le message",
+        "loading": "Envoi en cours...",
+        "success": "Votre message a été envoyé avec succès !",
+        "error": "Une erreur est survenue. Veuillez réessayer.",
+        "validation": {
+            "required": "Veuillez remplir tous les champs obligatoires."
         }
     },
     "footer": {

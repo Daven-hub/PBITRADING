@@ -53,11 +53,11 @@ const About = () => {
                         alt={t("about.imageAlt")}
                         className="rounded-2xl shadow-xl w-full object-cover h-[400px]"
                     />
-                    <button className="absolute inset-0 flex items-center justify-center">
+                    {/* <button className="absolute inset-0 flex items-center justify-center">
                         <div className="bg-secondary rounded-full p-6 transition">
                             <Play className="text-black" size={36} fill="black" />
                         </div>
-                    </button>
+                    </button> */}
                 </motion.div>
             </div>
 
@@ -73,7 +73,7 @@ const About = () => {
                             className="bg-gray-50 rounded-xl shadow-lg p-6 hover:shadow-2xl transition"
                         >
                             <img
-                                src={`/images/${["agriculture", "energy", "or"][i]}.png`}
+                                src={`/images/${["cereale", "pawer", "or"][i]}.png`}
                                 alt={t(`about.expertise.${card}.imageAlt`)}
                                 className="rounded-lg mb-4 h-40 w-full object-cover"
                             />

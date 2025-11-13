@@ -89,12 +89,12 @@ const Footer = () => {
                 <div className="mt-2 sm:mt-0">
                     Design & Développement par{" "}
                     <a
-                        href="https://franchise-it-tech.com"
+                        href="https://duchessedafricart.com/services/MindzStudio"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white underline hover:text-secondary transition"
                     >
-                        Franchise-it
+                        MindzStudio
                     </a>
                 </div>
             </div>

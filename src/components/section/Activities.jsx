@@ -78,7 +78,7 @@ const Activities = () => {
                 ))}
             </div>
 
-            <div className="mt-16 relative overflow-hidden rounded-2xl shadow-lg max-w-6xl mx-auto">
+            <div className="mt-12 relative overflow-hidden rounded-2xl shadow-lg px-[10%] mx-auto">
                 <div className="flex animate-scroll">
                     {images.map((image, index) => (
                         <div

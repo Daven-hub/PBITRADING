@@ -203,26 +203,26 @@
         "button": "Learn More"
     },
     "contact": {
-        "title": "Contact Form",
-        "subtitle": "Want to get in touch? Fill out the form below and we will respond as soon as possible.",
+        "title": "Contact Us",
+        "subtitle": "We’d love to hear from you. Please fill out the form below.",
         "labels": {
-            "name": "Full Name",
-            "email": "Email Address",
-            "company": "Company (optional)",
+            "name": "Name",
+            "email": "Email",
+            "company": "Company",
             "message": "Message"
         },
         "placeholders": {
-            "name": "Your name",
-            "email": "name@example.com",
+            "name": "Your full name",
+            "email": "Your email address",
             "company": "Your company name",
-            "message": "Write your message..."
+            "message": "Type your message here..."
         },
-        "button": "Send",
-        "contacts": {
-            "cameroon": "+237 6 93 11 12 07",
-            "belgium": "+32 470 18 17 25",
-            "russia": "+7 (987) 504-65-57",
-            "email": "office@pbitrading.com"
+        "button": "Send Message",
+        "loading": "Sending...",
+        "success": "Your message has been sent successfully!",
+        "error": "An error occurred. Please try again.",
+        "validation": {
+            "required": "Please fill in all required fields."
         }
     },
     "footer": {
