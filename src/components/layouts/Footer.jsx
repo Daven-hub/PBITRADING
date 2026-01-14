@@ -33,20 +33,20 @@ const Footer = () => {
                     <div className="flex flex-col gap-3 text-gray-200 text-sm">
                         <div className="flex items-center gap-2">
                             <Phone size={16} />
-                            <span>Cameroon: {contacts.cameroon}</span>
+                            <span>Cameroon: +237 6 93 11 12 07</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Phone size={16} />
-                            <span>Belgium: {contacts.belgium}</span>
+                            <span>Belgium: +32 470 18 17 25</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Phone size={16} />
-                            <span>Russia: {contacts.russia}</span>
+                            <span>Russia: +7 (987) 504-65-57</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Mail size={16} />
-                            <a href={`mailto:${contacts.email}`} className="hover:underline break-all">
-                                {contacts.email}
+                            <a href={`mailto:office@pbitrading.com`} className="hover:underline break-all">
+                                office@pbitrading.com
                             </a>
                         </div>
                     </div>
