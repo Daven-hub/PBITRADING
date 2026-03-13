@@ -3,7 +3,7 @@ services:
     image: pbitrading-app:latest
     container_name: pbitrading-app
     ports:
-      - "90:80"   # ← port 8090 du VPS → port 80 du container
+      - "8090:80"   # ← port 8090 du VPS → port 80 du container
     restart: always
     environment:
       - NODE_ENV=production

@@ -15,17 +15,17 @@ const Header = () => {
                         <div className="flex items-center gap-6">
                             <div className="flex items-center space-x-1">
                                 <Phone size={14} />
-                                <span>Cameroon: +237 6 93 11 12 07</span>
+                                <span>Test New: +237 6 93 11 12 07</span>
                             </div>
 
                             <div className="hidden md:flex items-center space-x-1">
                                 <Phone size={14} />
-                                <span>Belgium: +32 470 18 17 25</span>
+                                <span>Maxime: +32 470 18 17 25</span>
                             </div>
 
                             <div className="hidden lg:flex items-center space-x-1">
                                 <Phone size={14} />
-                                <span>Russia: +7 (987) 504-65-57</span>
+                                <span>Lionel: +7 (987) 504-65-57</span>
                             </div>
 
                             <div className="flex items-center space-x-1">
@@ -34,7 +34,7 @@ const Header = () => {
                                     href="mailto:office@pbitrading.com"
                                     className="hover:underline break-all"
                                 >
-                                    office@pbitrading.com
+                                   New email adress
                                 </a>
                             </div>
                         </div>
