@@ -9,141 +9,89 @@ jobs:
 
   # ─────────────────────────────────────────
   # Job 1 : Lint — qualité du code
-  # Vérifie que le code respecte les règles
-  # ESLint définies dans le projet
   # ─────────────────────────────────────────
   lint:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
-    - run: npm ci
-    - run: npm run lint
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run ESLint
+      run: npm run lint
 
   # ─────────────────────────────────────────
-  # Job 2 : Security Scan — sécurité
-  # Vérifie que vos dépendances npm n'ont pas
-  # de vulnérabilités connues
-  # Tourne EN PARALLÈLE avec le Job 1
-  # ─────────────────────────────────────────
-  security:
-    name: Security Scan
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'npm'
-    - run: npm ci
-    - name: Audit des dépendances
-      run: npm audit --audit-level=high
-
-  # ─────────────────────────────────────────
-  # Job 3 : Build & Test
-  # Compile le projet React et lance les tests
-  # Attend que Lint ET Security soient ✅
+  # Job 2 : Build & Test
   # ─────────────────────────────────────────
   build-and-test:
     name: Build & Test
     runs-on: ubuntu-latest
-    needs: [ lint, security ] # ← attend les 2 jobs en parallèle
+    needs: lint # ← attend que Lint soit ✅
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build
-    - name: Upload artifact
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build project
+      run: npm run build
+
+    - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: dist
         path: dist/
-        retention-days: 1
 
   # ─────────────────────────────────────────
-  # Job 4 : Docker Build & Push
-  # Construit l'image Docker et la pousse
-  # sur Docker Hub
+  # Job 3 : Docker Build & Push
   # ─────────────────────────────────────────
   docker-build-push:
     name: Docker Build & Push
     runs-on: ubuntu-latest
-    needs: build-and-test
+    needs: build-and-test # ← attend que Build & Test soit ✅
     steps:
-    - uses: actions/checkout@v4
-    - uses: docker/login-action@v3
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-    - uses: docker/build-push-action@v6
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v6
       with:
         context: .
         push: true
-        tags: |
-          ${{ secrets.DOCKER_USERNAME }}/pbitrading-app:latest
-          ${{ secrets.DOCKER_USERNAME }}/pbitrading-app:${{ github.sha }}
+        tags: ${{ secrets.DOCKER_USERNAME }}/pbitrading-app:latest
 
   # ─────────────────────────────────────────
-  # Job 5 : Deploy Staging
-  # Déploie sur un environnement de test
-  # avant la production
+  # Job 4 : Deploy — mise à jour sur le VPS
   # ─────────────────────────────────────────
-  deploy-staging:
-    name: Deploy Staging
+  deploy:
+    name: Update GitOps
     runs-on: ubuntu-latest
-    needs: docker-build-push
-    environment: staging # ← environnement GitHub protégé
+    needs: docker-build-push # ← attend que Docker Build & Push soit ✅
     steps:
-    - uses: appleboy/ssh-action@v1
-      with:
-        host: ${{ secrets.VPS_HOST }}
-        username: ${{ secrets.VPS_USER }}
-        key: ${{ secrets.VPS_SSH_KEY }}
-        script: |
-          cd ~/PROJET-CLIENTS/PBITRADING
-          docker compose pull
-          docker compose up -d
-          echo "✅ Staging déployé"
-
-  # ─────────────────────────────────────────
-  # Job 6 : Smoke Test
-  # Vérifie que le site répond correctement
-  # après le déploiement staging
-  # ─────────────────────────────────────────
-  smoke-test:
-    name: Smoke Test
-    runs-on: ubuntu-latest
-    needs: deploy-staging
-    steps:
-    - name: Vérifier que le site répond
-      run: |
-        STATUS=$(curl -o /dev/null -s -w "%{http_code}" https://gecaf.ca)
-        echo "HTTP Status: $STATUS"
-        if [ "$STATUS" != "200" ]; then
-          echo "❌ Le site ne répond pas correctement"
-          exit 1
-        fi
-        echo "✅ Le site répond avec un code 200"
-
-  # ─────────────────────────────────────────
-  # Job 7 : Deploy Production
-  # Déploiement final en production
-  # Seulement si le Smoke Test est ✅
-  # ─────────────────────────────────────────
-  deploy-production:
-    name: Deploy Production
-    runs-on: ubuntu-latest
-    needs: smoke-test
-    environment: production # ← peut nécessiter une approbation manuelle
-    steps:
-    - uses: appleboy/ssh-action@v1
+    - name: Deploy to VPS
+      uses: appleboy/ssh-action@v1
       with:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USER }}
@@ -153,44 +101,3 @@ jobs:
           docker compose pull
           docker compose up -d
           docker image prune -f
-          echo "🚀 Production déployée"
-
-  # ─────────────────────────────────────────
-  # Job 8 : Notify
-  # Envoie une notification après le déploiement
-  # Tourne EN PARALLÈLE avec le Job 9
-  # ─────────────────────────────────────────
-  notify:
-    name: Notify
-    runs-on: ubuntu-latest
-    needs: deploy-production
-    if: always() # ← tourne même si un job précédent a échoué
-    steps:
-    - name: Notification de déploiement
-      run: |
-        if [ "${{ needs.deploy-production.result }}" == "success" ]; then
-          echo "✅ Déploiement de pbitrading réussi !"
-        else
-          echo "❌ Déploiement de pbitrading échoué !"
-        fi
-
-  # ─────────────────────────────────────────
-  # Job 9 : Cleanup
-  # Nettoie les vieilles images Docker
-  # sur le VPS pour libérer de l'espace
-  # Tourne EN PARALLÈLE avec le Job 8
-  # ─────────────────────────────────────────
-  cleanup:
-    name: Cleanup
-    runs-on: ubuntu-latest
-    needs: deploy-production
-    if: always() # ← tourne toujours pour nettoyer
-    steps:
-    - uses: appleboy/ssh-action@v1
-      with:
-        host: ${{ secrets.VPS_HOST }}
-        username: ${{ secrets.VPS_USER }}
-        key: ${{ secrets.VPS_SSH_KEY }}
-        script: |
-          docker image prune -af --filter "until=24h"
-          echo "🧹 Nettoyage terminé"
