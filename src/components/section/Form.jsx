@@ -1,7 +1,7 @@
 export const Form = () => {
     return (
         <>
-            <div className=" text-center"> bonjour</div>
+            <div className=" text-center">Bonjour</div>
         </>
     )
 }
